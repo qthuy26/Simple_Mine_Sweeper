@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <windows.h>
+#include <conio.h>
 #define M 10
 #define N 10
 #define MINE -1
@@ -286,6 +287,7 @@ int main(){
 			SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_INTENSITY);
 			printf("\nYou LOSE.\n");
 			SetConsoleTextAttribute(hConsole, saved_attributes);
+			getch();
 			break;
 		}
 		open_cell_2(r, c);
@@ -296,6 +298,7 @@ int main(){
 			SetConsoleTextAttribute(hConsole, FOREGROUND_BLUE | FOREGROUND_INTENSITY);
 			printf("\nYou WINNNNNNNN!!!\n");
 			SetConsoleTextAttribute(hConsole, saved_attributes);
+			getch();
 			break;
 		}			
 	}
